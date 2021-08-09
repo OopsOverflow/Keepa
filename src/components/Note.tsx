@@ -1,16 +1,16 @@
 import React from "react";
 
-const Note: React.FC = () => {
+const Note = (props: {title: string, content: string}) => {
     return (
         <div className="note">
             <h1 contentEditable={true}>
-                Title
+                {props.title}
             </h1>
             <p contentEditable={true}>
-                Content
+                {props.content}
             </p>
         </div>
-    )
+    );
 }
 
 export default Note
